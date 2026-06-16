@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenSCAD Playground</title>
+    <meta
+      name="description"
+      content="OpenSCAD Playground: edit .scad models and render them to STL from the browser"
+    />
+
+    <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="./index.css" />
+    <meta name="theme-color" content="#000000" />
+
+    <script src="_share/html/imaps.ts?monaco&three"></script>
+
+    <!-- model-viewer for 3D preview -->
+    <script
+      type="module"
+      src="./model-viewer.js"
+      defer
+    ></script>
+    <!-- App entry point - biu will bundle this -->
+    <script type="module" src="./index.ts"></script>
+    <style>
+      #root,
+      body,
+      html {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin: 0;
+        height: 100vh;
+        height: var(--app-height, 100vh);
+      }
+
+      .p-tabmenu-nav {
+        justify-content: center;
+      }
+
+      .opacity-animated {
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .opacity-0 {
+        opacity: 0;
+      }
+
+      .absolute-fill {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
+
+      @media only screen and (max-height: 600px),
+        only screen and (max-width: 600px),
+        only screen and (max-width: 767px),
+        only screen and (max-aspect-ratio: 1/2) {
+        .github-fork-ribbon {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run the OpenSCAD
+      Playground.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

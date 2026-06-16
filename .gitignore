@@ -1,0 +1,12 @@
+.DS_Store
+.biu-deps
+.biu-cache
+*.lock
+dist
+node_modules
+static/runner/libraries/
+static/wasm/
+_backend
+*.wasm
+*.zip
+
